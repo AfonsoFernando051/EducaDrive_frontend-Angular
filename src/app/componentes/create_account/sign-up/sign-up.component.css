@@ -1,0 +1,18 @@
+* {
+  font-family: 'Manrope', sans-serif;
+}
+
+section{
+  padding: 3%;
+
+}
+
+.page-header{
+  display: flex;
+}
+
+
+
+.header-title{
+  padding-left: 1%;
+}
