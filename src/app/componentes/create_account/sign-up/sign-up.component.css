@@ -13,6 +13,10 @@ section{
 
 }
 
+.form-group{
+  padding-bottom: 1% ;
+}
+
 .page-header{
   display: flex;
 }
