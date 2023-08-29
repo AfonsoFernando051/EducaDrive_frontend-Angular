@@ -2,6 +2,12 @@
   font-family: 'Manrope', sans-serif;
 }
 
+
+.header_color{
+  background-color: #2B2B2B;
+  color: aliceblue;
+}
+
 section{
   padding: 3%;
 
@@ -11,7 +17,9 @@ section{
   display: flex;
 }
 
-
+.header-icon{
+  padding-left: 10%;
+}
 
 .header-title{
   padding-left: 1%;
