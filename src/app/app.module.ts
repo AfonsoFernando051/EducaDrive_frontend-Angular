@@ -12,6 +12,7 @@ import { NavComponent } from './componentes/template/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RodapeComponent,
     SignUpComponent,
     NavComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
