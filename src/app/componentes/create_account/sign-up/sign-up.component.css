@@ -1,15 +1,16 @@
 span, label {
   font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
 }
 
 
 .header_color{
-  background-color: #2B2B2B;
+  background-color: #161e2d;
   color: aliceblue;
 }
 
 section{
-  padding: 3%;
+  padding: 4%;
 
 }
 
@@ -28,4 +29,19 @@ section{
 
 .header-title{
   padding-left: 1%;
+}
+
+#SignUp {
+  color: #fff;
+  background-color: #88cc14;
+  padding: 10px 30px;
+  border: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+@media (min-width: 1920px) {
+  .header-icon{
+    padding-left: 17%;
+  }
 }

@@ -3,7 +3,7 @@
 }
 
 .fullBody{
-  background-color: #F5F5F5;
+  background-color: #E9E9E9;
 }
 
 #LetsTake {
@@ -161,6 +161,7 @@ div#PHE {
   font-family: 'Manrope', sans-serif;
   width: 90%;
   height: 135px;
+  border-radius: 9px;
 }
 
 .PHEcontent {
