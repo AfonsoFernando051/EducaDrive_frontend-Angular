@@ -212,7 +212,8 @@ div#products {
   align-items: center;
   justify-items: center;
   display: flex;
-  margin: 55px 3%;
+  margin: 55px 4%;
+
 }
 
 .InvertMobile {
@@ -231,7 +232,7 @@ div#products {
 }
 
 .productsSize {
-  height: auto;
+  height: 380px;
 }
 
 .contentProducts img {
@@ -241,14 +242,14 @@ div#products {
 
 .contentProducts p {
   margin-top: 35px;
-  margin-left: 35px;
+  margin-left: 5%;
   font-weight: 400;
   text-align: justify;
 }
 
 .contentProducts h3 {
   margin-top: 35px;
-  margin-left: 35px;
+  margin-left: 5%;
   font-size: 28px;
   color: #2B2B2B;
   font-weight: bold;
@@ -260,7 +261,7 @@ div#products {
   font-weight: 600;
   color: #FF6600;
   margin-top: 35px;
-  margin-left: 35px;
+  margin-left: 5%;
 }
 
 .contentProducts a:hover {
