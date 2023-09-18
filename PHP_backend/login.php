@@ -14,13 +14,12 @@ $stmt = $pdo->prepare($sql_select_users);
 
 
 $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-$stmt->bindParam(':password', $password, PDO::PARAM_STR);
+$stmt->bindParam(':password', $pwd, PDO::PARAM_STR);
 
 $stmt->execute();
 $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
-var_dump($resultado);
+
 if($resultado){
-    echo 'teste';
 
     $rows = array();
    
