@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -8,20 +9,23 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  dados = {email: '', password: ''};
+  email:string = '';
+  password:string = '';
 
-  constructor(private http:HttpClient){}
+  constructor(private authService:AuthService){}
 
-  enviarFormulario(){
-    this.http.post('localhost:8000/login.php', this.dados)
-    .subscribe(
-      (resposta) => {
-        console.log('Resposta do servidor:', resposta);
-        
+  enviarFormulario(){    
+    this.authService.login(this.email, this.password).subscribe(
+      (response) => {
+        console.log(response);
+
+        if(response){
+          window.location.href = '/dashboard'
+        }
       },
-      (erro)=>{
-        console.error('Erro ao enviar dados:', erro);
-
+      (error) => {
+        console.log('Erro no login', error);
+        
       }
     )
 

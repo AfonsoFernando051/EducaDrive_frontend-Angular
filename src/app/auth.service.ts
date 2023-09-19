@@ -7,13 +7,18 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private ApiUrl = 'localhost:8000/login.php';
-
+  private ApiUrlLogin = 'http://localhost:3000/auth/login';
+  private ApiUrlsignUp = 'http://localhost:3000/auth/sign-up';
 
   constructor(private http: HttpClient) { }
 
-  login(username: string, password: string): Observable<any> {
-    const data = { username, password };
-    return this.http.post(this.ApiUrl, data);
+  login(email: string, password: string): Observable<any> {
+    const data = { email, password };
+    return this.http.post(this.ApiUrlLogin, data);
+  }
+
+  signUp(username: string, email: string, password: string){
+    const data = {username, email, password };
+    return this.http.post(this.ApiUrlsignUp, data);
   }
 }
