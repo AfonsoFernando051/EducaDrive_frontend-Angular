@@ -17,7 +17,7 @@ export class AuthService {
     return this.http.post(this.ApiUrlLogin, data);
   }
 
-  signUp(username: string, email: string, password: string){
+  signUp(username: string, email: string, password: string){    
     const data = {username, email, password };
     return this.http.post(this.ApiUrlsignUp, data);
   }

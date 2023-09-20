@@ -15,10 +15,12 @@ export class SignUpComponent {
   constructor(private authService:AuthService){}
 
   createAccount(){
+    console.log(this.username, this.email, this.password);
+    
     this.authService.signUp(this.username, this.email, this.password).subscribe(
       (response) =>{
-        console.log("resposta");
-        
+
+        alert("Usuário criado com sucesso");
       },
       (error)=>{
         console.log('Erro no cadastro', error);
