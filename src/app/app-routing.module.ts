@@ -7,6 +7,7 @@ import { PublicLayoutComponent } from './public-layout/public-layout.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
 import { DashboardHomeComponent } from './login-layout/dashboard/dashboard-views/dashboard-home/dashboard-home.component';
 import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/professores.component';
+import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/cadastro-professores/cadastro-professores.component';
 
 const routes: Routes = [
   {
@@ -38,7 +39,10 @@ const routes: Routes = [
         path: 'dashboard-home', component: DashboardHomeComponent
       },
       {
-        path: 'professores', component: ProfessoresComponent
+        path: 'professores', component: ProfessoresComponent,
+      },
+      {
+        path: 'professores/cadastro-professores', component: CadastroProfessoresComponent
       }
     ]
   },

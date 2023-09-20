@@ -24,7 +24,8 @@ import { DashboardNavComponent } from './login-layout/dashboard/dashboard-compon
 import { DashboardHomeComponent } from './login-layout/dashboard/dashboard-views/dashboard-home/dashboard-home.component';
 import { MatCardModule } from '@angular/material/card';
 import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/professores.component'
-
+import { MatButtonModule } from '@angular/material/button';
+import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/cadastro-professores/cadastro-professores.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/p
     DashboardNavComponent,
     DashboardHomeComponent,
     ProfessoresComponent,
+    CadastroProfessoresComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/p
     ReactiveFormsModule,
     HttpClientModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
