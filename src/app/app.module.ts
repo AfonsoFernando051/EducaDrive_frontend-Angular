@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
+import { PublicLayoutComponent } from './public-layout/public-layout.component';
+import { LoginLayoutComponent } from './login-layout/login-layout.component';
 
 
 @NgModule({
@@ -29,6 +31,8 @@ import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-hom
     NavComponent,
     LoginComponent,
     DashboardHomeComponent,
+    PublicLayoutComponent,
+    LoginLayoutComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,28 +4,35 @@ import { SignUpComponent } from './componentes/create_account/sign-up/sign-up.co
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
+import { PublicLayoutComponent } from './public-layout/public-layout.component';
+import { LoginLayoutComponent } from './login-layout/login-layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch:  'full'
+    component:PublicLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent
+      },
+      {
+        path: 'sign-up',
+        component: SignUpComponent
+      },
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+    ]
   },
   {
-    path: 'sign-up',
-    component: SignUpComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'dashboard/dashboard-home',
-    component: DashboardHomeComponent
+    path: 'dashboard/dashboard-home', component: LoginLayoutComponent,
+    children: [
+      {
+        path: '', component: DashboardHomeComponent
+      }
+    ]
   },
 ];
 
