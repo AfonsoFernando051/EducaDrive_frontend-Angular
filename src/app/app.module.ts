@@ -13,10 +13,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './componentes/login/login.component';
-import { DashboardComponent } from './componentes/dashboard/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
 
 
 @NgModule({
@@ -28,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     SignUpComponent,
     NavComponent,
     LoginComponent,
-    DashboardComponent,
+    DashboardHomeComponent,
   ],
   imports: [
     BrowserModule,

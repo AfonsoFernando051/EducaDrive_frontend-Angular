@@ -20,7 +20,7 @@ export class LoginComponent {
         console.log(response);
 
         if(response){
-          window.location.href = '/dashboard'
+          window.location.href = '/dashboard/dashboard-home'
         }
       },
       (error) => {

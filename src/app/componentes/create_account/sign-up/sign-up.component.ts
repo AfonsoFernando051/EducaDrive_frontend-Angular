@@ -21,6 +21,9 @@ export class SignUpComponent {
       (response) =>{
 
         alert("Usuário criado com sucesso");
+        if(response){
+          window.location.href = '/dashboard/dashboard-home'
+        }
       },
       (error)=>{
         console.log('Erro no cadastro', error);
