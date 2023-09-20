@@ -15,13 +15,15 @@ import { LoginComponent } from './public-layout/componentes/login/login.componen
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardHomeComponent } from './login-layout/dashboard/dashboard-home/dashboard-home.component';
 import { PublicLayoutComponent } from './public-layout/public-layout.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
 import { DashboardCabecalhoComponent } from './login-layout/dashboard/dashboard-componentes/dashboard-cabecalho/dashboard-cabecalho.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { DashboardFooterComponent } from './login-layout/dashboard/dashboard-componentes/dashboard-footer/dashboard-footer.component';
 import { DashboardNavComponent } from './login-layout/dashboard/dashboard-componentes/dashboard-nav/dashboard-nav.component';
+import { DashboardHomeComponent } from './login-layout/dashboard/dashboard-views/dashboard-home/dashboard-home.component';
+import { MatCardModule } from '@angular/material/card';
+import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/professores.component'
 
 @NgModule({
   declarations: [
@@ -31,12 +33,13 @@ import { DashboardNavComponent } from './login-layout/dashboard/dashboard-compon
     RodapeComponent,
     SignUpComponent,
     LoginComponent,
-    DashboardHomeComponent,
     PublicLayoutComponent,
     LoginLayoutComponent,
     DashboardCabecalhoComponent,
     DashboardFooterComponent,
     DashboardNavComponent,
+    DashboardHomeComponent,
+    ProfessoresComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { DashboardNavComponent } from './login-layout/dashboard/dashboard-compon
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
