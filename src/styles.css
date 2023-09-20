@@ -5,3 +5,11 @@ body{
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.orange_color{
+  color: #FF6600;
+}
+
+.v-middle{
+  vertical-align: middle;
+}
