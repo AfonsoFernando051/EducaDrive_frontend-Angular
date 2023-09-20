@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from 'src/app/auth.service';
+import { AuthService } from 'src/app/public-layout/services/auth.service';
 
 @Component({
   selector: 'app-sign-up',

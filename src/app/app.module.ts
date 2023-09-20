@@ -16,7 +16,7 @@ import { LoginComponent } from './public-layout/componentes/login/login.componen
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardHomeComponent } from './dashboard/dashboard-home/dashboard-home.component';
+import { DashboardHomeComponent } from './login-layout/dashboard/dashboard-home/dashboard-home.component';
 import { PublicLayoutComponent } from './public-layout/public-layout.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
 
