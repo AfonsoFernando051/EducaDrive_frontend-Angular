@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class ProfessoresService {
 
   private ApiUrlProf = 'http://localhost:3000/insert/professor';
+  private ApiUrlProfRead = 'http://localhost:3000/read/read-professores';
 
   constructor(private snackbar: MatSnackBar, private http: HttpClient) { }
 
@@ -26,6 +27,6 @@ export class ProfessoresService {
   }
 
   getProfessor(): Observable<Professor>{
-    return this.http.get<Professor>(this.ApiUrlProf)
+    return this.http.get<Professor>(this.ApiUrlProfRead)
   }
 }
