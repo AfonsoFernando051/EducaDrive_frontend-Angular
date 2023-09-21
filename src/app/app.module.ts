@@ -29,7 +29,7 @@ import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard
 import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { ReadProfessoresComponent } from './login-layout/dashboard/dashboard-componentes/read-professores/read-professores.component'
+import { ReadProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/read-professores/read-professores.component'
 
 @NgModule({
   declarations: [

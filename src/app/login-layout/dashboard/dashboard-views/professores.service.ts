@@ -26,7 +26,7 @@ export class ProfessoresService {
     return this.http.post<Professor>(this.ApiUrlProf, professor);
   }
 
-  getProfessor(): Observable<Professor>{
-    return this.http.get<Professor>(this.ApiUrlProfRead)
+  getProfessor(): Observable<Professor[]>{
+    return this.http.get<Professor[]>(this.ApiUrlProfRead)
   }
 }
