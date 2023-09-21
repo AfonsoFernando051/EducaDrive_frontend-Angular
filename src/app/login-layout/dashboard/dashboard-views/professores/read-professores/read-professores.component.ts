@@ -9,14 +9,14 @@ import { Professor } from '../professores.model';
 })
 export class ReadProfessoresComponent implements OnInit {
 
-professores: Professor[] | undefined = [];
+professores!: Professor[];
+displayedColumns = ['id', 'nome', 'Veiculo Principal'];
 
 constructor(private professoresService: ProfessoresService){}
 
 ngOnInit(): void {
 
   this.professoresService.getProfessor().subscribe(professor => {
-    console.log(professor);
     this.professores = professor;
   })
 }

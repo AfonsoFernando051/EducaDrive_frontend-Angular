@@ -29,7 +29,11 @@ import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard
 import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { ReadProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/read-professores/read-professores.component'
+import { ReadProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/read-professores/read-professores.component';
+import { TableProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/table-professores/table-professores.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort'
 
 @NgModule({
   declarations: [
@@ -47,7 +51,8 @@ import { ReadProfessoresComponent } from './login-layout/dashboard/dashboard-vie
     DashboardHomeComponent,
     ProfessoresComponent,
     CadastroProfessoresComponent,
-    ReadProfessoresComponent
+    ReadProfessoresComponent,
+    TableProfessoresComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +68,10 @@ import { ReadProfessoresComponent } from './login-layout/dashboard/dashboard-vie
     MatButtonModule,
     MatSnackBarModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
