@@ -8,6 +8,8 @@ import { LoginLayoutComponent } from './login-layout/login-layout.component';
 import { DashboardHomeComponent } from './login-layout/dashboard/dashboard-views/dashboard-home/dashboard-home.component';
 import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/professores.component';
 import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/cadastro-professores/cadastro-professores.component';
+import { ProfessoresUpdateComponent } from './login-layout/dashboard/dashboard-views/professores/professores-update/professores-update.component';
+
 
 const routes: Routes = [
   {
@@ -46,6 +48,9 @@ const routes: Routes = [
       },
       {
         path: 'professores/cadastro-professores', component: CadastroProfessoresComponent
+      },
+      {
+        path: 'professores/update-professores/:id', component: ProfessoresUpdateComponent
       }
     ]
   },

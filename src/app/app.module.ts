@@ -33,7 +33,8 @@ import { ReadProfessoresComponent } from './login-layout/dashboard/dashboard-vie
 import { TableProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/table-professores/table-professores.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort'
+import { MatSortModule } from '@angular/material/sort';
+import { ProfessoresUpdateComponent } from './login-layout/dashboard/dashboard-views/professores/professores-update/professores-update.component'
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { MatSortModule } from '@angular/material/sort'
     ProfessoresComponent,
     CadastroProfessoresComponent,
     ReadProfessoresComponent,
-    TableProfessoresComponent
+    TableProfessoresComponent,
+    ProfessoresUpdateComponent
   ],
   imports: [
     BrowserModule,

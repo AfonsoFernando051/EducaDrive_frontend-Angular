@@ -10,7 +10,7 @@ import { Professor } from '../professores.model';
 export class ReadProfessoresComponent implements OnInit {
 
 professores!: Professor[];
-displayedColumns = ['id', 'nome', 'Veiculo Principal'];
+displayedColumns = ['id', 'nome', 'Veiculo Principal', 'action'];
 
 constructor(private professoresService: ProfessoresService){}
 

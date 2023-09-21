@@ -19,7 +19,7 @@ export class ProfessoresService {
       duration:3000,
       horizontalPosition: "right",
       verticalPosition: "top"
-    })
+    });
   }
 
   criarProfessor(professor:Professor): Observable<Professor>{
@@ -29,4 +29,15 @@ export class ProfessoresService {
   getProfessor(): Observable<Professor[]>{
     return this.http.get<Professor[]>(this.ApiUrlProfRead)
   }
+
+  readById(id: string): Observable<Professor>{
+    const url = `${this.ApiUrlProfRead}/${id}`;
+    return this.http.get<Professor>(url);
+  }
+
+  update(professor:Professor): Observable<Professor>{
+    const url = `${this.ApiUrlProfRead}/${professor.id}`;
+    return this.http.put<Professor>(url, professor);
+  }
+
 }
