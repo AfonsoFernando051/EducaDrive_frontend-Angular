@@ -76,7 +76,7 @@ export class TableProfessoresDataSource extends DataSource<Professor> {
     return data.sort((a, b) => {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
-        case 'nome': return compare(a.nome, b.nome, isAsc);
+        // case 'nome': return compare(a.nome, b.nome, isAsc);
         // case 'id': return compare(+a.id, +b.id, isAsc);
         default: return 0;
       }

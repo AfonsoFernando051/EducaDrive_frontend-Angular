@@ -11,7 +11,8 @@ export class ProfessoresService {
 
   private ApiUrlProf = 'http://localhost:3000/insert/professor';
   private ApiUrlProfRead = 'http://localhost:3000/read/read-professores';
-
+  private ApiUrlUpdateProf = 'http://localhost:3000/update/professores';
+  
   constructor(private snackbar: MatSnackBar, private http: HttpClient) { }
 
   showMessage(msg: string): void{
@@ -30,13 +31,17 @@ export class ProfessoresService {
     return this.http.get<Professor[]>(this.ApiUrlProfRead)
   }
 
-  readById(id: string): Observable<Professor>{
-    const url = `${this.ApiUrlProfRead}/${id}`;
+  readById(id: string): Observable<Professor>{    
+    const url = `${this.ApiUrlProfRead}/${id}`;    
     return this.http.get<Professor>(url);
   }
 
   update(professor:Professor): Observable<Professor>{
-    const url = `${this.ApiUrlProfRead}/${professor.id}`;
+    console.log(professor);
+    console.log(professor.id);
+    const url = `${this.ApiUrlUpdateProf}/5`;
+    console.log(url);
+
     return this.http.put<Professor>(url, professor);
   }
 
