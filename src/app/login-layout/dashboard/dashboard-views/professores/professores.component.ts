@@ -15,7 +15,7 @@ export class ProfessoresComponent {
   }
 
   navigateToProfessores(): void{
-    this.router.navigate(['dashboard/dashboard-home/professores/cadastro-professores'])
+    this.router.navigate(['dashboard/professores/cadastro-professores'])
     
   }
 

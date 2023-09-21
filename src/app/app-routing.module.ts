@@ -33,8 +33,11 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'dashboard/dashboard-home', component: LoginLayoutComponent,
+    path: 'dashboard', component: LoginLayoutComponent,
     children: [
+      {
+        path: '', component: DashboardHomeComponent
+      },
       {
         path: 'dashboard-home', component: DashboardHomeComponent
       },
