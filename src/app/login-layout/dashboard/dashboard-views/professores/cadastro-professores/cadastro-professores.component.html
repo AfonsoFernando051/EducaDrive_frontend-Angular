@@ -1,7 +1,24 @@
-<button mat-raised-button (click)="criarProfessor()" color="primary">
-    Salvar
-</button>
+<mat-card>
+    <mat-card-title>Novo Professor</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+            [(ngModel)]="professor.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Veículo Principal"
+            [(ngModel)]="professor.veiculo1" name="veiculo1">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Veículo Secundário (Opcional)"
+            [(ngModel)]="professor.veiculo2" name="veiculo2">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="criarProfessor()" color="primary">
+        Salvar
+    </button>
 
-<button mat-raised-button (click)="cancel()" color="primary">
-    Cancelar
-</button>
+    <button mat-raised-button (click)="cancel()" color="primary">
+        Cancelar
+    </button>
+</mat-card>

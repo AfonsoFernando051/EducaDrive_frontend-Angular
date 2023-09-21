@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PublicLayoutComponent } from './public-layout/public-layout.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
 import { DashboardCabecalhoComponent } from './login-layout/dashboard/dashboard-componentes/dashboard-cabecalho/dashboard-cabecalho.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { DashboardFooterComponent } from './login-layout/dashboard/dashboard-componentes/dashboard-footer/dashboard-footer.component';
 import { DashboardNavComponent } from './login-layout/dashboard/dashboard-componentes/dashboard-nav/dashboard-nav.component';
 import { DashboardHomeComponent } from './login-layout/dashboard/dashboard-views/dashboard-home/dashboard-home.component';
@@ -27,6 +27,8 @@ import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/p
 import { MatButtonModule } from '@angular/material/button';
 import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/cadastro-professores/cadastro-professores.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
