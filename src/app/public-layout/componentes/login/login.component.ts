@@ -17,10 +17,11 @@ export class LoginComponent {
   enviarFormulario(){    
     this.authService.login(this.email, this.password).subscribe(
       (response) => {
-        console.log(response);
-
         if(response){
-          window.location.href = '/dashboard/dashboard-home'
+          this.authService.showMessage(response.message)
+          setTimeout(() => {
+            window.location.href = '/dashboard/dashboard-home'
+          }, 2000);
         }
       },
       (error) => {

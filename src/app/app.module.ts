@@ -26,6 +26,8 @@ import { MatCardModule } from '@angular/material/card';
 import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/professores.component'
 import { MatButtonModule } from '@angular/material/button';
 import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/cadastro-professores/cadastro-professores.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +56,8 @@ import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard
     HttpClientModule,
     MatToolbarModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
