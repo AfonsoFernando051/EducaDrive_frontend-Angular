@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar'
 import { HttpClient } from '@angular/common/http';
 import { Professor } from './professores/professores.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,11 @@ export class ProfessoresService {
     })
   }
 
-  criarProfessor(professor:Professor){
-    return this.http.post(this.ApiUrlProf, professor);
+  criarProfessor(professor:Professor): Observable<Professor>{
+    return this.http.post<Professor>(this.ApiUrlProf, professor);
+  }
+
+  getProfessor(): Observable<Professor>{
+    return this.http.get<Professor>(this.ApiUrlProf)
   }
 }

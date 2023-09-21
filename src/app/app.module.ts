@@ -28,7 +28,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/cadastro-professores/cadastro-professores.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
+import { ReadProfessoresComponent } from './login-layout/dashboard/dashboard-componentes/read-professores/read-professores.component'
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { MatInputModule } from '@angular/material/input'
     DashboardNavComponent,
     DashboardHomeComponent,
     ProfessoresComponent,
-    CadastroProfessoresComponent
+    CadastroProfessoresComponent,
+    ReadProfessoresComponent
   ],
   imports: [
     BrowserModule,
