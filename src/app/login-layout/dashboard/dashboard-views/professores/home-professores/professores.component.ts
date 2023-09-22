@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderService } from '../../../dashboard-componentes/dashboard-cabecalho/header-service/header.service';
 
 @Component({
   selector: 'app-professores',
@@ -8,7 +9,13 @@ import { Router } from '@angular/router';
 })
 export class ProfessoresComponent {
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private headerService: HeaderService){
+    headerService.headerData = {
+      title: 'Professores',
+      icon: 'home',
+      routeUrl: '/professores'
+    }
+  }
 
   ngOnInit(): void {
     

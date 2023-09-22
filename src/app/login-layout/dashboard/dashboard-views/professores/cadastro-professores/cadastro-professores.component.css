@@ -6,3 +6,8 @@ form{
 button{
     margin-right: 10px;
 }
+
+#headerIconName{
+    color: black;
+    text-decoration: none;
+}
