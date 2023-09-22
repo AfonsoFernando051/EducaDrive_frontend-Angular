@@ -23,7 +23,7 @@ export class CadastroProfessoresComponent implements OnInit{
   criarProfessor(){
     this.professorService.criarProfessor(this.professor).subscribe(() => {
       this.professorService.showMessage("Operação executada com sucesso!");
-      this.router.navigate(['dashboard/professores/cadastro-professores']);
+      this.router.navigate(['/dashboard/professores']);
 
     })
   }
