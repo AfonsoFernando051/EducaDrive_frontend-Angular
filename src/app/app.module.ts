@@ -23,7 +23,7 @@ import { DashboardFooterComponent } from './login-layout/dashboard/dashboard-com
 import { DashboardNavComponent } from './login-layout/dashboard/dashboard-componentes/dashboard-nav/dashboard-nav.component';
 import { DashboardHomeComponent } from './login-layout/dashboard/dashboard-views/dashboard-home/dashboard-home.component';
 import { MatCardModule } from '@angular/material/card';
-import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/professores.component'
+import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/home-professores/professores.component';
 import { MatButtonModule } from '@angular/material/button';
 import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/cadastro-professores/cadastro-professores.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar'

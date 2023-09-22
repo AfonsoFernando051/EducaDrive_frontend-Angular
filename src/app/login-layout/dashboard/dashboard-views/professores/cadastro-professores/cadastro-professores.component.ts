@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProfessoresService } from '../../professores.service';
+import { ProfessoresService } from '../professor-service/professores.service';
 import { Router } from '@angular/router';
-import { Professor } from '../professores.model';
+import { Professor } from '../../models/professores.model';
 @Component({
   selector: 'app-cadastro-professores',
   templateUrl: './cadastro-professores.component.html',

@@ -6,7 +6,7 @@ import { LoginComponent } from './public-layout/componentes/login/login.componen
 import { PublicLayoutComponent } from './public-layout/public-layout.component';
 import { LoginLayoutComponent } from './login-layout/login-layout.component';
 import { DashboardHomeComponent } from './login-layout/dashboard/dashboard-views/dashboard-home/dashboard-home.component';
-import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/professores.component';
+import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/home-professores/professores.component';
 import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/cadastro-professores/cadastro-professores.component';
 import { ProfessoresUpdateComponent } from './login-layout/dashboard/dashboard-views/professores/professores-update/professores-update.component';
 import { ProfessoresDeleteComponent } from './login-layout/dashboard/dashboard-views/professores/professores-delete/professores-delete.component';

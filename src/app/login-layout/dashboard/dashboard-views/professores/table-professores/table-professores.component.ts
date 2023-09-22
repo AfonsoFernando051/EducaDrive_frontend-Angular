@@ -3,7 +3,7 @@ import { MatTable } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { TableProfessoresDataSource } from './table-professores-datasource';
-import { Professor } from '../professores.model';
+import { Professor } from '../../models/professores.model';
 
 @Component({
   selector: 'app-table-professores',
