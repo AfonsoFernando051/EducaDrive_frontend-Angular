@@ -1,6 +1,6 @@
 export interface Professor{
     id?:number,
-    nome?:string,
+    nome:string,
     veiculo1:string,
     veiculo2:string,
 }

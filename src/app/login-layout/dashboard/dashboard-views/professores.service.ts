@@ -36,11 +36,11 @@ export class ProfessoresService {
     return this.http.get<Professor>(url);
   }
 
-  update(professor:Professor): Observable<Professor>{
-    console.log(professor);
-    console.log(professor.id);
-    const url = `${this.ApiUrlUpdateProf}/5`;
+  update(professor:Professor,id: number): Observable<Professor>{
+    console.log(id);
+    const url = `${this.ApiUrlUpdateProf}/${id}`;
     console.log(url);
+    console.log(professor);
 
     return this.http.put<Professor>(url, professor);
   }

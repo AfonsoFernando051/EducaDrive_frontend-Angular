@@ -10,11 +10,7 @@ import { Professor } from '../professores.model';
 })
 export class ProfessoresUpdateComponent implements OnInit {
 
-  professor: Professor = {
-    nome: '',
-    veiculo1: '',
-    veiculo2: '',
-  }
+  professor!: Professor;
 
   constructor(
     private professorService: ProfessoresService,
@@ -22,21 +18,18 @@ export class ProfessoresUpdateComponent implements OnInit {
     private route: ActivatedRoute
   ){}
 
+  private id = this.route.snapshot.paramMap.get('id') || '';
+
   ngOnInit(): void {
-    const id: string | null = this.route.snapshot.paramMap.get('id');
-    this.professorService.readById(id ?? '5').subscribe(professor => {
+    this.professorService.readById(this.id).subscribe(professor => {
       this.professor = professor;
-      console.log(professor);
+    });    
 
-    });
-    console.log(id);
-
-    console.log(this.professor);
-    
   }
 
-  updateProfessor(): void{
-    this.professorService.update(this.professor).subscribe(professor => {
+  updateProfessor(): void{   
+    const id = parseInt(this.id) 
+    this.professorService.update(this.professor, id!).subscribe(professor => {
       this.professorService.showMessage("Atualizado com sucesso!");
       this.router.navigate(['/dashboard/professores'])
     })
