@@ -9,7 +9,7 @@ import { DashboardHomeComponent } from './login-layout/dashboard/dashboard-views
 import { ProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/professores.component';
 import { CadastroProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/cadastro-professores/cadastro-professores.component';
 import { ProfessoresUpdateComponent } from './login-layout/dashboard/dashboard-views/professores/professores-update/professores-update.component';
-
+import { ProfessoresDeleteComponent } from './login-layout/dashboard/dashboard-views/professores/professores-delete/professores-delete.component';
 
 const routes: Routes = [
   {
@@ -51,6 +51,9 @@ const routes: Routes = [
       },
       {
         path: 'professores/update-professores/:id', component: ProfessoresUpdateComponent
+      },
+      {
+        path: 'professores/delete-professores/:id', component: ProfessoresDeleteComponent
       }
     ]
   },

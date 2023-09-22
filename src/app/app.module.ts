@@ -34,7 +34,8 @@ import { TableProfessoresComponent } from './login-layout/dashboard/dashboard-vi
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { ProfessoresUpdateComponent } from './login-layout/dashboard/dashboard-views/professores/professores-update/professores-update.component'
+import { ProfessoresUpdateComponent } from './login-layout/dashboard/dashboard-views/professores/professores-update/professores-update.component';
+import { ProfessoresDeleteComponent } from './login-layout/dashboard/dashboard-views/professores/professores-delete/professores-delete.component'
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ProfessoresUpdateComponent } from './login-layout/dashboard/dashboard-v
     CadastroProfessoresComponent,
     ReadProfessoresComponent,
     TableProfessoresComponent,
-    ProfessoresUpdateComponent
+    ProfessoresUpdateComponent,
+    ProfessoresDeleteComponent
   ],
   imports: [
     BrowserModule,
