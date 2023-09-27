@@ -10,7 +10,13 @@ import { Professor } from '../../models/professores.model';
 })
 export class ProfessoresUpdateComponent implements OnInit {
 
-  professor!: Professor;
+  professor: Professor = {
+    id:0,
+    nome:'',
+    veiculo1:'',
+    veiculo2:'',
+    escola_id: 1
+  };
 
   constructor(
     private professorService: ProfessoresService,
@@ -22,9 +28,9 @@ export class ProfessoresUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     this.professorService.readById(this.id).subscribe(professor => {
-      this.professor = professor;      
+      this.professor = professor;  
+      console.log(this.professor);
     });    
-
   }
 
   updateProfessor(): void{   

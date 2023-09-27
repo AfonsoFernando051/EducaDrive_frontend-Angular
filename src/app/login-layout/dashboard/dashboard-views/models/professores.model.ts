@@ -3,4 +3,5 @@ export interface Professor{
     nome:string,
     veiculo1:string,
     veiculo2:string,
+    escola_id?: number
 }
