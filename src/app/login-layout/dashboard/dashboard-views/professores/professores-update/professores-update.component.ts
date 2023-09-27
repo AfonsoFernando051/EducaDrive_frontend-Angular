@@ -22,7 +22,7 @@ export class ProfessoresUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     this.professorService.readById(this.id).subscribe(professor => {
-      this.professor = professor;
+      this.professor = professor;      
     });    
 
   }

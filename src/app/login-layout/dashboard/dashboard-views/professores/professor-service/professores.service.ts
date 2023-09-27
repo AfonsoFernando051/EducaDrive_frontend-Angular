@@ -9,10 +9,10 @@ import { Observable, map, catchError, EMPTY } from 'rxjs';
 })
 export class ProfessoresService {
 
-  private ApiUrlProf = 'http://localhost:3000/insert/professor';
-  private ApiUrlProfRead = 'http://localhost:3000/read/read-professores';
+  private ApiUrlProf = 'http://localhost:3000/insert-professor';
+  private ApiUrlProfRead = 'http://localhost:3000/read-professores';
   private ApiUrlUpdateProf = 'http://localhost:3000/update/professores';
-  private ApiUrlDeleteProf = 'http://localhost:3000/delete/professor';
+  private ApiUrlDeleteProf = 'http://localhost:3000/delete-professor';
 
   constructor(private snackbar: MatSnackBar, private http: HttpClient) { }
 

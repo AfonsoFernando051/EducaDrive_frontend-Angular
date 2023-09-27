@@ -22,7 +22,7 @@ export class CadastroProfessoresComponent implements OnInit{
     private headerService: HeaderService){
     headerService.headerData = {
       title: 'Professores',
-      icon: 'Home',
+      icon: 'home',
       routeUrl: '/professores'
     }
   }
