@@ -25,8 +25,7 @@ export class LoginComponent {
         }
       },
       (error) => {
-        console.log('Erro no login', error);
-        
+        this.authService.showMessage(error.error)        
       }
     )
 
