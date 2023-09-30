@@ -12,7 +12,6 @@ header {
   align-items: center;
   justify-content: center;
   background-color: #1c2538;
-  width: 100%;
 }
 
 header ul li a:hover {
@@ -30,7 +29,7 @@ header button:hover {
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
-#SignUp :hover{
+#SignIn :hover{
   background-color: #eb6105;
 }
 
@@ -65,10 +64,12 @@ nav {
 .navbar {
   text-decoration: none;
   justify-content: space-between;
+  margin-left: 3%;
+
 }
 
 header ul {
-  gap: 30px;
+  gap: 39px;
 }
 
 .nav-color {
@@ -83,7 +84,7 @@ header ul {
   font-size: 18px;
 }
 
-#SignUp {
+#SignIn {
 
   color: #fff;
   background-color: #88cc14;
@@ -106,7 +107,6 @@ header ul {
   }
   nav {
     padding-left: 17%;
-    width: 100%;
   }
 
 }

@@ -8,8 +8,8 @@ import { MatSnackBar } from '@angular/material/snack-bar'
 })
 export class AuthService {
 
-  private ApiUrlLogin = 'http://localhost:3000/signin';
-  private ApiUrlsignUp = 'http://localhost:3000/auth/sign-up';
+  private ApiUrlLogin = 'http://localhost:3001/signin';
+  private ApiUrlsignUp = 'http://localhost:3001/auth/sign-up';
 
   constructor(private http: HttpClient, private snackbar: MatSnackBar) { }
 

@@ -54,7 +54,7 @@
 #buttonID {
   display: flex;
   width: auto;
-  margin-right: 750px;
+  padding-right: 750px;
 }
 
 .buttonClass2 {
@@ -212,8 +212,7 @@ div#products {
   align-items: center;
   justify-items: center;
   display: flex;
-  margin: 55px 4%;
-
+  padding: 55px 3%;
 }
 
 .InvertMobile {

@@ -36,12 +36,12 @@ footer {
 
 div#icons {
   display: inline-flex;
-  margin: 1% 37%;
+  margin: 1% ;
   gap: 0%;
-  width: 49%;
   color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 31%;
 }
 
 .logoID {
@@ -51,7 +51,7 @@ div#icons {
 #footerContent {
   display: inline-flex;
   gap: 10px;
-  margin-left: 18%;
+  padding-left: 18%;
   width: 1000px;
   font-weight: 400;
   font-size: 18px;
