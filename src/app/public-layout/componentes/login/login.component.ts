@@ -17,10 +17,12 @@ export class LoginComponent {
   enviarFormulario(){    
     this.authService.login(this.email, this.password).subscribe(
       (response) => {
-        if(response){
+        if(response.token){
           this.authService.showMessage(response.message)
+          console.log(response.token);
+          localStorage.setItem('token', response.token);
           setTimeout(() => {
-            window.location.href = '/dashboard/dashboard-home'
+            window.location.href = '/dashboard/dashboard-home';
           }, 2000);
         }
       },

@@ -14,6 +14,7 @@ import { HomeAlunosComponent } from './login-layout/dashboard/dashboard-views/al
 import { AlunosCreateComponent } from './login-layout/dashboard/dashboard-views/alunos/alunos-create/alunos-create.component';
 import { AlunosUpdateComponent } from './login-layout/dashboard/dashboard-views/alunos/alunos-update/alunos-update.component';
 import { AlunosDeleteComponent } from './login-layout/dashboard/dashboard-views/alunos/alunos-delete/alunos-delete.component';
+
 const routes: Routes = [
   {
     path: '',
