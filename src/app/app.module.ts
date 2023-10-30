@@ -35,7 +35,13 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { ProfessoresUpdateComponent } from './login-layout/dashboard/dashboard-views/professores/professores-update/professores-update.component';
-import { ProfessoresDeleteComponent } from './login-layout/dashboard/dashboard-views/professores/professores-delete/professores-delete.component'
+import { ProfessoresDeleteComponent } from './login-layout/dashboard/dashboard-views/professores/professores-delete/professores-delete.component';
+import { AlunosComponent } from './login-layout/dashboard/dashboard-views/alunos/read-alunos/alunos.component';
+import { HomeAlunosComponent } from './login-layout/dashboard/dashboard-views/alunos/home-alunos/home-alunos.component';
+import { AlunosUpdateComponent } from './login-layout/dashboard/dashboard-views/alunos/alunos-update/alunos-update.component';
+import { MatSelectModule } from '@angular/material/select';
+import { AlunosCreateComponent } from './login-layout/dashboard/dashboard-views/alunos/alunos-create/alunos-create.component';
+import { AlunosDeleteComponent } from './login-layout/dashboard/dashboard-views/alunos/alunos-delete/alunos-delete.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +62,12 @@ import { ProfessoresDeleteComponent } from './login-layout/dashboard/dashboard-v
     ReadProfessoresComponent,
     TableProfessoresComponent,
     ProfessoresUpdateComponent,
-    ProfessoresDeleteComponent
+    ProfessoresDeleteComponent,
+    AlunosComponent,
+    HomeAlunosComponent,
+    AlunosUpdateComponent,
+    AlunosCreateComponent,
+    AlunosDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +86,8 @@ import { ProfessoresDeleteComponent } from './login-layout/dashboard/dashboard-v
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

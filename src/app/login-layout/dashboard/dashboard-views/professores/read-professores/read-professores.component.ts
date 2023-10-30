@@ -15,7 +15,6 @@ displayedColumns = ['id', 'nome', 'Veiculo Principal', 'action'];
 constructor(private professoresService: ProfessoresService){}
 
 ngOnInit(): void {
-
   this.professoresService.getProfessor().subscribe(professor => {
     this.professores = professor;
   })

@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-title>Novo aluno</mat-card-title>
+    <form>
+        <mat-form-field class="inputUpdateForm">
+            <input matInput placeholder="Nome"
+            [(ngModel)]="aluno.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field class="inputUpdateForm">
+            <mat-select placeholder="Selecione um professor" [(ngModel)]="aluno.professor" name="professor">
+                <mat-option *ngFor="let professores of professores" [value]="professores.id">
+                    {{ professores.nome }}
+                  </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="inputUpdateForm">
+            <mat-select placeholder="Selecione uma categoria" [(ngModel)]="aluno.categoria">
+                <mat-option name="carro" value="carro">Carro</mat-option>
+                <mat-option name="moto" value="moto">Moto</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="criarAluno()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()" color="primary">
+        Cancelar
+    </button>
+</mat-card>

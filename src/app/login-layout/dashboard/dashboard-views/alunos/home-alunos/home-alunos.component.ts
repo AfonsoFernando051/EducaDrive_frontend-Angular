@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { HeaderService } from '../../../dashboard-componentes/dashboard-cabecalho/header-service/header.service';
 
 @Component({
-  selector: 'app-professores',
-  templateUrl: './professores.component.html',
-  styleUrls: ['./professores.component.css']
+  selector: 'app-home-alunos',
+  templateUrl: './home-alunos.component.html',
+  styleUrls: ['./home-alunos.component.css']
 })
-export class ProfessoresComponent {
+export class HomeAlunosComponent {
 
   constructor(private router: Router, private headerService: HeaderService){
     headerService.headerData = {
@@ -17,12 +17,7 @@ export class ProfessoresComponent {
     }
   }
 
-  ngOnInit(): void {
-    
+  navigateToAlunos(): void{
+    this.router.navigate(['dashboard/cadastrar-aluno'])
   }
-
-  navigateToProfessores(): void{
-    this.router.navigate(['dashboard/professores/cadastro-professores'])
-  }
-
 }
