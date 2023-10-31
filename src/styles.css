@@ -23,3 +23,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-color: #e35e6b;
   color: #fff;
 }
+
+.modal-logout{
+  padding: 4%;
+}
+
+.button-modal{
+  margin-top: 10%;
+}
+
+.button-modal-touch{
+  background-color: #3f51b5;
+  margin-left: 2%;
+  color: #fff;
+}

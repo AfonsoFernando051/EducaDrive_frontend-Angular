@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from './header-service/header.service';
+import { MatDialog } from '@angular/material/dialog';
+import { LogoutComponent } from '../logout/logout.component';
 
 @Component({
   selector: 'app-dashboard-cabecalho',
@@ -9,7 +11,7 @@ import { HeaderService } from './header-service/header.service';
 export class DashboardCabecalhoComponent implements OnInit{
 
   ngOnInit(): void { }
-  constructor(private headerService: HeaderService){}
+  constructor(private headerService: HeaderService, public dialog: MatDialog){}
 
   get title(): string{
     return this.headerService.headerData.title
@@ -21,5 +23,12 @@ export class DashboardCabecalhoComponent implements OnInit{
   
   get routeUrl(): string{
     return this.headerService.headerData.routeUrl
+  }
+  
+  abrirModalSair() {
+    this.dialog.open(LogoutComponent, {
+      width: '400px',
+      height: '150px' // Defina o tamanho do modal conforme sua necessidade.
+    });
   }
 }

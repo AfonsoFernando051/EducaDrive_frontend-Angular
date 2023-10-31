@@ -1,0 +1,21 @@
+<div class="table-container">
+    <table>
+        <thead>
+        <tr>
+            <ng-container *ngFor="let dia of diasSemana">
+            <th colspan="15">{{ dia }}</th>
+            </ng-container>
+        </tr>
+        <tr>
+            <ng-container *ngFor="let dia of diasSemana">
+                <ng-container *ngFor="let horario of horarios">
+                    <th>{{ horario }}</th>
+                </ng-container>   
+            </ng-container> 
+        </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+    </table>
+</div>

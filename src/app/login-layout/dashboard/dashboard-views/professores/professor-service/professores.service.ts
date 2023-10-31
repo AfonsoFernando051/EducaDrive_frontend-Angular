@@ -58,7 +58,7 @@ export class ProfessoresService {
     );
   }
 
-  delete(id: string): Observable<Professor>{
+  delete(id: Number): Observable<Professor>{
     const url = `${this.ApiUrlDeleteProf}/${id}`;    
     return this.http.delete<Professor>(url).pipe(
       map(obj => obj),

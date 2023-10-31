@@ -42,7 +42,9 @@ import { AlunosUpdateComponent } from './login-layout/dashboard/dashboard-views/
 import { MatSelectModule } from '@angular/material/select';
 import { AlunosCreateComponent } from './login-layout/dashboard/dashboard-views/alunos/alunos-create/alunos-create.component';
 import { AlunosDeleteComponent } from './login-layout/dashboard/dashboard-views/alunos/alunos-delete/alunos-delete.component';
-
+import { LogoutComponent } from './login-layout/dashboard/dashboard-componentes/logout/logout.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AgendaComponent } from './login-layout/dashboard/dashboard-componentes/agenda/agenda.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +70,8 @@ import { AlunosDeleteComponent } from './login-layout/dashboard/dashboard-views/
     AlunosUpdateComponent,
     AlunosCreateComponent,
     AlunosDeleteComponent,
+    LogoutComponent,
+    AgendaComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,7 +91,8 @@ import { AlunosDeleteComponent } from './login-layout/dashboard/dashboard-views/
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

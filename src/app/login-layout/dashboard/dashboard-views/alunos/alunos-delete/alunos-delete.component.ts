@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Professor } from '../../models/professores.model';
-import { Router, ActivatedRoute } from '@angular/router';
 import { AlunosService } from '../alunos-service/alunos.service';
-
+import { MatDialogRef } from '@angular/material/dialog';
+import { AlunosComponent } from '../read-alunos/alunos.component';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
   selector: 'app-alunos-delete',
   templateUrl: './alunos-delete.component.html',
@@ -10,23 +11,25 @@ import { AlunosService } from '../alunos-service/alunos.service';
 })
 export class AlunosDeleteComponent{
 
-private id = this.route.snapshot.paramMap.get('id') || '';
+  private id: Number;
 
   constructor(
     private alunoService: AlunosService,
-    private router: Router,
-    private route: ActivatedRoute
-  ){}
+    public dialogRef: MatDialogRef<AlunosComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: { itemId: number }
+  ){
+    this.id = data.itemId;  
+  }
 
   deletarAluno(): void{
     this.alunoService.delete(this.id).subscribe(aluno => {
       this.alunoService.showMessage("Deletado com sucesso!");
-      this.router.navigate(['/dashboard/alunos'])
+      this.dialogRef.close();
     })
   }
   
-  cancel(): void{
-    this.router.navigate(['/dashboard/aluno'])
+  fecharModal(){
+    this.dialogRef.close();
   }
 
 }

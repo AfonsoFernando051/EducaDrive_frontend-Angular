@@ -1,39 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Professor } from '../../models/professores.model';
 import { ProfessoresService } from '../professor-service/professores.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { MatDialogRef } from '@angular/material/dialog';
+import { ProfessoresComponent } from '../home-professores/professores.component';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-professores-delete',
   templateUrl: './professores-delete.component.html',
   styleUrls: ['./professores-delete.component.css']
 })
-export class ProfessoresDeleteComponent implements OnInit {
+export class ProfessoresDeleteComponent{
 
 professor!: Professor;
-private id = this.route.snapshot.paramMap.get('id') || '';
+private id: Number;
 
 constructor(
   private professorService: ProfessoresService,
-  private router: Router,
-  private route: ActivatedRoute
-){}
+  public dialogRef: MatDialogRef<ProfessoresComponent>,
+  @Inject(MAT_DIALOG_DATA) public data: { itemId: number }
+){
+  this.id = data.itemId;  
+}
 
-  ngOnInit(): void {
-    this.professorService.readById(this.id).subscribe(professor => {
-      this.professor = professor;
-    })
-  }
-
-  deletarProfessor(): void{
+  deletarProfessor(): void{    
     this.professorService.delete(this.id).subscribe(professor => {
       this.professorService.showMessage("Deletado com sucesso!");
-      this.router.navigate(['/dashboard/professores'])
+      this.dialogRef.close();
     })
   }
-  
-  cancel(): void{
-    this.router.navigate(['/dashboard/professores'])
+
+  fecharModal(){
+    this.dialogRef.close();
   }
 
 }

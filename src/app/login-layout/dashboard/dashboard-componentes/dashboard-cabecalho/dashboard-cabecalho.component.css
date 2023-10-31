@@ -1,4 +1,8 @@
 .header{
     margin-bottom: 1px;
+}
 
+#logout{
+    margin-left: 80%;
+    padding: 20px;
 }

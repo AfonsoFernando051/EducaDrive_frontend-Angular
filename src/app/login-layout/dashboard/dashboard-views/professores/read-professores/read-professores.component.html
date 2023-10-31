@@ -24,7 +24,7 @@
                     edit
                 </i>
             </a>
-            <a routerLink="delete-professores/{{row.id}}">
+            <a (click)="abrirModalDelete(row.id)" style="cursor: pointer;">
                 <i class="material-icons delete">
                     delete
                 </i>

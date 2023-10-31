@@ -57,9 +57,6 @@ const routes: Routes = [
         path: 'professores/update-professores/:id', component: ProfessoresUpdateComponent
       },
       {
-        path: 'professores/delete-professores/:id', component: ProfessoresDeleteComponent
-      },
-      {
         path: 'alunos', component: HomeAlunosComponent,
       },
       {
@@ -68,9 +65,6 @@ const routes: Routes = [
       {
         path: 'alunos/update-aluno/:id', component: AlunosUpdateComponent,
       },
-      {
-        path: 'alunos/delete-alunos/:id', component: AlunosDeleteComponent
-      }
     ]
   },
 ];

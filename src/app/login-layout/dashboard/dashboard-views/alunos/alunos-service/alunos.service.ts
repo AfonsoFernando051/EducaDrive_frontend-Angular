@@ -59,7 +59,7 @@ export class AlunosService {
     );
   }
 
-  delete(id: string): Observable<Alunos>{
+  delete(id: Number): Observable<Alunos>{
     const url = `${this.ApiUrlDeleteAluno}/${id}`;    
     return this.http.delete<Alunos>(url).pipe(
       map(obj => obj),

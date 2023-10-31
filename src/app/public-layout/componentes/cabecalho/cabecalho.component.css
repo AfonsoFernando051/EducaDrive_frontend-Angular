@@ -68,6 +68,10 @@ nav {
 
 }
 
+#navbarSupportedContent{
+  margin-left: 4%;
+}
+
 header ul {
   gap: 39px;
 }

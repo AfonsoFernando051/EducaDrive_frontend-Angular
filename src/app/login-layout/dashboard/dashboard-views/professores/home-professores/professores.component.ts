@@ -24,5 +24,4 @@ export class ProfessoresComponent {
   navigateToProfessores(): void{
     this.router.navigate(['dashboard/professores/cadastro-professores'])
   }
-
 }
