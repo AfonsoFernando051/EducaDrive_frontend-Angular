@@ -1,8 +1,11 @@
-table th{
+th{
     border: 1px solid black;
-    rules: rows;
 }
-  
+
+td{
+    border: 1px solid black;
+    width: 300px;
+}
 .table-container {
     max-width: 100%;
     overflow-x: auto;
