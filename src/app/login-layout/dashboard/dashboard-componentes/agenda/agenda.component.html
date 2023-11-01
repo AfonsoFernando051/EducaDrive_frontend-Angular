@@ -4,14 +4,16 @@
         <tr>
             <th></th>
             <ng-container *ngFor="let dia of diasSemana">
-            <th class="dia-semana" colspan="15"><span>{{ dia }}</span></th>
+            <th class="dia-semana" colspan="15"><span id="dia">{{ dia }}</span></th>
             </ng-container>
         </tr>
         <tr>
-            <th class="horarios" >Horários</th>
+            <th class="horarios">Horários</th>
             <ng-container *ngFor="let dia of diasSemana">
                 <ng-container *ngFor="let horario of horarios">
-                    <th mat-header-row>{{ horario }}</th>
+                    <th>
+                        <span id="horario">{{ horario }}</span>
+                    </th>
                 </ng-container>   
             </ng-container> 
         </tr>
@@ -27,7 +29,6 @@
                     </ng-container> 
                 </tr>
             </ng-container>
-           
         </tbody>
     </table>
 </div>
