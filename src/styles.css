@@ -1,39 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Manrope', sans-serif;
+}
+
 body{
   background-color: #F5F5F5;
+  margin: 0;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.orange_color{
-  color: #FF6600;
-}
-
-.v-middle{
-  vertical-align: middle;
-}
-
-.msg-sucess{
-  background-color: #28a745;
-  color: #fff;
-}
-
-.msg-error{
-  background-color: #e35e6b;
-  color: #fff;
-}
-
-.modal-logout{
-  padding: 4%;
-}
-
-.button-modal{
-  margin-top: 10%;
-}
-
-.button-modal-touch{
-  background-color: #3f51b5;
-  margin-left: 2%;
-  color: #fff;
-}

@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './public-layout/home/home.component';
 import { CabecalhoComponent } from './public-layout/componentes/cabecalho/cabecalho.component';
 import { RodapeComponent } from './public-layout/componentes/rodape/rodape.component';
-import { SignUpComponent } from './public-layout/componentes/create_account/sign-up/sign-up.component';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -30,7 +29,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReadProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/read-professores/read-professores.component';
-import { TableProfessoresComponent } from './login-layout/dashboard/dashboard-views/professores/table-professores/table-professores.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
@@ -50,7 +48,7 @@ import { LetsTakeComponent } from './public-layout/componentes/lets-take/lets-ta
 import { LogosComponent } from './public-layout/componentes/logos/logos.component';
 import { AboutUsComponent } from './public-layout/componentes/about-us/about-us.component';
 import { OurInterestsComponent } from './public-layout/componentes/our-interests/our-interests.component';
-import { ProductsComponent } from './products/products.component';
+import { ProductsComponent } from './public-layout/componentes/products/products.component';
 import { OurValuesComponent } from './public-layout/componentes/our-values/our-values.component';
 import { CurrentProjectsComponent } from './public-layout/componentes/current-projects/current-projects.component';
 
@@ -60,7 +58,6 @@ import { CurrentProjectsComponent } from './public-layout/componentes/current-pr
     HomeComponent,
     CabecalhoComponent,
     RodapeComponent,
-    SignUpComponent,
     LoginComponent,
     PublicLayoutComponent,
     LoginLayoutComponent,
@@ -71,7 +68,6 @@ import { CurrentProjectsComponent } from './public-layout/componentes/current-pr
     ProfessoresComponent,
     CadastroProfessoresComponent,
     ReadProfessoresComponent,
-    TableProfessoresComponent,
     ProfessoresUpdateComponent,
     ProfessoresDeleteComponent,
     AlunosComponent,
