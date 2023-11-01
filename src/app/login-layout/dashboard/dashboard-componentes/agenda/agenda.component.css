@@ -9,7 +9,7 @@ td{
 .table-container {
     max-width: 100%;
     overflow-x: auto;
-    height: 500px;
+    height: 450px;
 }
 
 .dia-semana{
@@ -28,10 +28,6 @@ th span{
 
 .professor{
     height: 50px;
-}
-
-.professor-name{
-
 }
 
 .block-class{

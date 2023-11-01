@@ -1,9 +1,19 @@
-<mat-card style="width: 300px; height: 300px;">
+<!-- <mat-card style="width: 300px; height: 300px;">
     <mat-card-title class="title">
-        Horário Livre: 
+         
     </mat-card-title>
-    <button mat-raised-button (click)="reservar(data)">
-        Reservar
+    <button mat-raised-button >
+        
     </button>
-</mat-card>
+</mat-card> -->
 
+<div class="modal-class">
+    <form action="">
+        <h1>Horário Livre:</h1>
+        <h2>Professor: {{data.nome}}</h2>
+        <h2>Dia: {{data.dia}}</h2>
+        <h2>Horário: {{data.horario}}</h2>
+        <button class="button-modal" mat-button (click)="reservar(data)">Reservar</button>
+        <button class="button-modal-touch button-modal" mat-button (click)="sair()">Sair</button>
+    </form>
+</div>
