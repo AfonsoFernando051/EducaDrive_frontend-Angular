@@ -21,6 +21,8 @@ export class AgendaComponent implements OnInit{
   ngOnInit(): void {
     this.professoresService.getProfessor().subscribe(professor => {
       this.professores = professor;
-    })
+    })    
   }
+
+  
 }

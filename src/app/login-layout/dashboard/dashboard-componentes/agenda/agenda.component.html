@@ -4,11 +4,11 @@
         <tr>
             <th></th>
             <ng-container *ngFor="let dia of diasSemana">
-            <th colspan="15">{{ dia }}</th>
+            <th class="dia-semana" colspan="15"><span>{{ dia }}</span></th>
             </ng-container>
         </tr>
         <tr>
-            <th>Horários</th>
+            <th class="horarios" >Horários</th>
             <ng-container *ngFor="let dia of diasSemana">
                 <ng-container *ngFor="let horario of horarios">
                     <th>{{ horario }}</th>
@@ -19,10 +19,10 @@
         <tbody>
             <ng-container *ngFor="let professor of professores">
                 <tr>
-                    <th colspan="1">{{ professor.nome }}</th>
+                    <th class="professor" colspan="1"><span class="professor-name">{{ professor.nome }}</span></th>
                     <ng-container *ngFor="let dia of diasSemana">
                         <ng-container *ngFor="let horario of horarios">
-                            <td></td>
+                            <td id="{{dia}}-{{horario}}" class="block-class"></td>
                         </ng-container>   
                     </ng-container> 
                 </tr>

@@ -9,5 +9,34 @@ td{
 .table-container {
     max-width: 100%;
     overflow-x: auto;
+    height: 500px;
 }
-  
+
+.dia-semana{
+    height: 30px;
+    color: #3f51b5;
+}
+
+th span{
+    display: inline-block; /* Torna o span um bloco inline */
+    text-align: center;
+}
+
+.horarios{
+    height: 30px;
+}
+
+.professor{
+    height: 50px;
+}
+
+.professor-name{
+
+}
+
+.block-class{
+    background-color: #fff;
+}
+.block-class:hover{
+    background-color: aqua;
+}
