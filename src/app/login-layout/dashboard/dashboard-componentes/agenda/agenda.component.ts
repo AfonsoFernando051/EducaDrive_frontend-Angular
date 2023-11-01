@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Professor } from '../../dashboard-views/models/professores.model';
 import { ProfessoresService } from '../../dashboard-views/professores/professor-service/professores.service';
+import { ConfirmationDialogService } from '../confirmation-dialog/confirmation-dialog-service/confirmation-dialog.service';
 
 @Component({
   selector: 'app-agenda',
@@ -16,13 +17,15 @@ export class AgendaComponent implements OnInit{
     '19:00', '20:00', '21:00'
   ];
 
-  constructor(private professoresService: ProfessoresService){}
+  constructor(private professoresService: ProfessoresService, private confirmationDialogService: ConfirmationDialogService) {}
+
+  openConfirmationDialog(nome: String, dia: String, horario: String): void {    
+    this.confirmationDialogService.openConfirmationDialog(nome, dia, horario);
+  }
 
   ngOnInit(): void {
     this.professoresService.getProfessor().subscribe(professor => {
       this.professores = professor;
     })    
   }
-
-  
 }

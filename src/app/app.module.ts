@@ -45,6 +45,7 @@ import { AlunosDeleteComponent } from './login-layout/dashboard/dashboard-views/
 import { LogoutComponent } from './login-layout/dashboard/dashboard-componentes/logout/logout.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AgendaComponent } from './login-layout/dashboard/dashboard-componentes/agenda/agenda.component';
+import { ConfirmationDialogComponent } from './login-layout/dashboard/dashboard-componentes/confirmation-dialog/confirmation-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,6 +73,7 @@ import { AgendaComponent } from './login-layout/dashboard/dashboard-componentes/
     AlunosDeleteComponent,
     LogoutComponent,
     AgendaComponent,
+    ConfirmationDialogComponent,
   ],
   imports: [
     BrowserModule,

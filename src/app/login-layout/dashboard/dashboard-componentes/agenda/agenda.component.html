@@ -11,7 +11,7 @@
             <th class="horarios" >Horários</th>
             <ng-container *ngFor="let dia of diasSemana">
                 <ng-container *ngFor="let horario of horarios">
-                    <th>{{ horario }}</th>
+                    <th mat-header-row>{{ horario }}</th>
                 </ng-container>   
             </ng-container> 
         </tr>
@@ -22,7 +22,7 @@
                     <th class="professor" colspan="1"><span class="professor-name">{{ professor.nome }}</span></th>
                     <ng-container *ngFor="let dia of diasSemana">
                         <ng-container *ngFor="let horario of horarios">
-                            <td id="{{dia}}-{{horario}}" class="block-class"></td>
+                            <td (click)='openConfirmationDialog(professor.nome, dia, horario)' id="{{professor.nome}}-{{dia}}-{{horario}}" class="block-class"></td>
                         </ng-container>   
                     </ng-container> 
                 </tr>
