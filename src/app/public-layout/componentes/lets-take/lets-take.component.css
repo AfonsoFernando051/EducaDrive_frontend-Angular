@@ -1,0 +1,91 @@
+#LetsTake {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #LetsTake span {
+    color: #FF6600;
+  }
+  
+  #LetsTake h1 {
+    font-weight: bold;
+    font-size: 57px;
+  }
+  
+  #LetsTake p {
+    font-weight: 400;
+  }
+  
+  #LetsTakeContentH1 {
+    margin-top: 11%;
+    height: 208px;
+  }
+  
+  #LetsTakeContent {
+    height: 350px;
+    width: 525px;
+  }
+  
+  #LetsTakeImage {
+    padding: 0%;
+    height: 450px;
+    width: 650px;
+  }
+  
+  #TakeImage {
+    padding-top: 50px;
+    height: 450px;
+    width: 650px;
+  }
+  
+  .button {
+    display: flex;
+  }
+  
+  #buttonID {
+    display: flex;
+    width: auto;
+    padding-right: 750px;
+  }
+  
+  .buttonClass2 {
+    margin-left: 8%;
+  }
+  
+  .buttonClass img {
+    padding-left: 10px;
+  }
+  
+  button#o {
+    color: #fff;
+    background-color: #FF6600;
+    padding: 18px 38px;
+    border: 8px;
+    border-radius: 8px;
+    width: 208px;
+    height: 64px;
+    font-weight: 700;
+    font-size: 16px
+  }
+  
+  button#o:hover {
+    background-color: #eb6105;
+    color: #fff;
+  }
+  
+  button#learn {
+    border-width: 1px;
+    border: solid #FF6600 1px;
+    border-radius: 8px;
+    padding: 18px 38px;
+    width: 208px;
+    height: 64px;
+    font-weight: 700;
+    font-size: 16px
+  }
+  
+  button#learn:hover {
+    color: #FF6600;
+  }
+  

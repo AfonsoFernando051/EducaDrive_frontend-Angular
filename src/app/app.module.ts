@@ -46,6 +46,14 @@ import { LogoutComponent } from './login-layout/dashboard/dashboard-componentes/
 import { MatDialogModule } from '@angular/material/dialog';
 import { AgendaComponent } from './login-layout/dashboard/dashboard-componentes/agenda/agenda.component';
 import { ConfirmationDialogComponent } from './login-layout/dashboard/dashboard-componentes/confirmation-dialog/confirmation-dialog.component';
+import { LetsTakeComponent } from './public-layout/componentes/lets-take/lets-take.component';
+import { LogosComponent } from './public-layout/componentes/logos/logos.component';
+import { AboutUsComponent } from './public-layout/componentes/about-us/about-us.component';
+import { OurInterestsComponent } from './public-layout/componentes/our-interests/our-interests.component';
+import { ProductsComponent } from './products/products.component';
+import { OurValuesComponent } from './public-layout/componentes/our-values/our-values.component';
+import { CurrentProjectsComponent } from './public-layout/componentes/current-projects/current-projects.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,6 +82,13 @@ import { ConfirmationDialogComponent } from './login-layout/dashboard/dashboard-
     LogoutComponent,
     AgendaComponent,
     ConfirmationDialogComponent,
+    LetsTakeComponent,
+    LogosComponent,
+    AboutUsComponent,
+    OurInterestsComponent,
+    ProductsComponent,
+    OurValuesComponent,
+    CurrentProjectsComponent
   ],
   imports: [
     BrowserModule,

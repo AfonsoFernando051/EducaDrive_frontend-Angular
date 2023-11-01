@@ -1,0 +1,19 @@
+
+#logos {
+    margin: 90px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 57px auto;
+  }
+  
+  #logoLine {
+    align-items: center;
+    justify-content: center;
+    width: 1%;
+    margin: auto 1%;
+  }
+  
+  div#line {
+    height: 8px;
+  }

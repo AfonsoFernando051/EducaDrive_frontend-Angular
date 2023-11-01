@@ -1,0 +1,49 @@
+
+div#OurValues {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    justify-content: center;
+    padding: 50px 30px;
+    margin-top: 50px;
+  }
+  
+  #OurValues h2 {
+    font-size: 52px;
+    font-weight: 700;
+  
+  }
+  
+  #OurValues img {
+    margin-right: 10px;
+  }
+  
+  #OurValuesContent {
+    text-align: left;
+    width: fit-content;
+  }
+  
+  #OurValuesContent p {
+    font-size: 20px;
+  }
+  
+  #OurValuesButton {
+    color: #fff;
+    background-color: #FF6600;
+    padding: 9px 38px;
+    border: 8px;
+    border-radius: 8px;
+    width: 158px;
+    height: 54px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  #OurValues button:hover {
+    text-decoration: none;
+    background-color: #eb6105;
+    color: #fff;
+  }
+  

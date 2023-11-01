@@ -1,0 +1,14 @@
+div#OurInterests {
+    text-align: center;
+    align-items: center;
+    margin-top: 200px;
+    justify-content: center;
+    border: 1px;
+}
+  
+#OurInterests H2 {
+    margin-bottom: 40px;
+    font-size: 55px;
+    font-weight: bold;
+}
+  

@@ -1,0 +1,70 @@
+
+.blockImage {
+    width: 70px;
+    height: 70px;
+  }
+  
+  div#products {
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    padding: 55px 3%;
+  }
+  
+  .InvertMobile {
+    display: none;
+  }
+  
+  .contentProducts {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    text-align: left;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+  }
+  
+  .productsSize {
+    height: 380px;
+  }
+  
+  .contentProducts img {
+    margin-top: 2%;
+    margin-left: 7%;
+  }
+  
+  .contentProducts p {
+    margin-top: 35px;
+    margin-left: 5%;
+    font-weight: 400;
+    text-align: justify;
+  }
+  
+  .contentProducts h3 {
+    margin-top: 35px;
+    margin-left: 5%;
+    font-size: 28px;
+    color: #2B2B2B;
+    font-weight: bold;
+  }
+  
+  .contentProducts a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF6600;
+    margin-top: 35px;
+    margin-left: 5%;
+  }
+  
+  .contentProducts a:hover {
+    text-decoration: none;
+    color: #eb6105;
+  }
+  
+  .productPoints {
+    display: none;
+  }

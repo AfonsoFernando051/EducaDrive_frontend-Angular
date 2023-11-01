@@ -1,0 +1,66 @@
+
+div#CurrentProjects {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+  
+  }
+  
+  #CurrentProjects h2 {
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 75px;
+    justify-content: center;
+    text-align: center;
+    font-size: 52px;
+    font-weight: BOLD;
+  }
+  
+  .CurrentProjectsFullHidden {
+    display: none;
+  }
+  
+  .contentProjects h3 {
+    font-size: 28px;
+    margin-top: 37px;
+    color: #2B2B2B;
+    font-weight: 600;
+    line-height: 150%;
+  }
+  
+  .contentProjects {
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .contentProjects p {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+  
+  .contentProjects a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF6600;
+  }
+  
+  .contentProjects a:hover {
+    text-decoration: none;
+    color: #eb6105;
+  }
+  
+  button#w {
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 40px 12px 42px;
+    border: 8px;
+    border-radius: 8px;
+  }
+  
+  button#w:hover {
+    text-decoration: underline;
+    color: rgb(7, 6, 6)
+  }
