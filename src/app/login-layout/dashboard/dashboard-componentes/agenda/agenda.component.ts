@@ -36,7 +36,6 @@ export class AgendaComponent implements OnInit{
     
     this.dataService.datas$.subscribe((datas) => {
       this.diaDaSemana = this.dataService.diaDaSemana;
-      // Atualize a exibição com as novas datas
     });
   }
   
