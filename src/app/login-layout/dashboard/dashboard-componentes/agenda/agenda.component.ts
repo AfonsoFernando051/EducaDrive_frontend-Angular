@@ -19,8 +19,8 @@ export class AgendaComponent implements OnInit{
 
   constructor(private professoresService: ProfessoresService, private confirmationDialogService: ConfirmationDialogService) {}
 
-  openConfirmationDialog(nome: String, dia: String, horario: String): void {    
-    this.confirmationDialogService.openConfirmationDialog(nome, dia, horario);
+  openConfirmationDialog(data: object): void {    
+    this.confirmationDialogService.openConfirmationDialog(data);
   }
 
   ngOnInit(): void {

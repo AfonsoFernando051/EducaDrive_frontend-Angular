@@ -1,0 +1,27 @@
+<mat-card id="modal-reserva">
+    <mat-card-title>Editar Reserva</mat-card-title>
+    <form>
+        <mat-form-field class="inputUpdateForm">
+            <mat-select placeholder="Selecione um aluno" name="professor">
+                <mat-option *ngFor="let aluno of alunos" [value]="aluno.id">
+                    {{ aluno.nome }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="inputUpdateForm">
+            <mat-select placeholder="Selecione uma categoria" name="categoria">
+                <mat-option value="carro">Carro</mat-option>
+                <mat-option value="moto">Moto</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="inputUpdateForm">
+            <mat-select placeholder="Selecione um veiculo" name="veiculo" [value]="professor.id">
+                <mat-option [(ngModel)]="professor.veiculo1" value="carro">{{ professor.veiculo1 }}</mat-option>
+                <mat-option [(ngModel)]="professor.veiculo2" value="moto">{{ professor.veiculo2 }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-checkbox id="checkClassPay" (change)="setCheckValue($event)" type="checkbox">Aula já foi paga</mat-checkbox>
+    </form>
+    <button class="button-modal" mat-button (click)="fecharModal()">Cancelar</button>
+    <button class="button-modal-touch button-modal" (click)="reservar()" mat-button>Reservar</button>
+</mat-card>

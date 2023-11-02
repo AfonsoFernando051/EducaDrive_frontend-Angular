@@ -9,7 +9,6 @@ td{
 .table-container {
     max-width: 100%;
     overflow-x: auto;
-    height: 450px;
 }
 
 .dia-semana{
@@ -46,6 +45,15 @@ td{
 .block-class{
     background-color: #fff;
 }
+
 .block-class:hover{
     background-color: aqua;
+}
+
+.aula-paga{
+    background-color: #1fc532;
+}
+
+.aula-nao-paga{
+    background-color: #d2a70d;
 }

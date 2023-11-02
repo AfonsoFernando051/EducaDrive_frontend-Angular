@@ -10,10 +10,11 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class ConfirmationDialogComponent {
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<ConfirmationDialogComponent>) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<ConfirmationDialogComponent>, private confirmationDialogService: ConfirmationDialogService) {}
   
-  reservar(data: any){
-    console.log(data);
+  openReservaModal(data: any){
+    this.dialogRef.close();
+    this.confirmationDialogService.openReserva(data);
   }
   sair(){
     this.dialogRef.close();

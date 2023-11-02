@@ -1,10 +1,10 @@
 <div class="modal-class">
     <form action="">
         <h1>Horário Livre:</h1>
-        <h2>Professor: {{data.nome}}</h2>
+        <h2>Professor: {{data.professor.nome}}</h2>
         <h2>Dia: {{data.dia}}</h2>
         <h2>Horário: {{data.horario}}</h2>
-        <button class="button-modal" mat-button (click)="reservar(data)">Reservar</button>
+        <button class="button-modal" mat-button (click)="openReservaModal(data)">Reservar</button>
         <button class="button-modal-touch button-modal" mat-button (click)="sair()">Sair</button>
     </form>
 </div>

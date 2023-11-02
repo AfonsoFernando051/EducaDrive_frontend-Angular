@@ -1,0 +1,19 @@
+.inputUpdateForm{
+    width: 100%;
+}
+
+#modal-reserva{
+    padding: 2%;
+    width: 500px;
+    height: 410px;
+}
+
+.modal-logout{
+    padding: 4%;
+}
+
+.button-modal-touch{
+    background-color: #3f51b5;
+    margin-left: 2%;
+    color: #fff;
+}

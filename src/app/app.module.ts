@@ -51,6 +51,8 @@ import { OurInterestsComponent } from './public-layout/componentes/our-interests
 import { ProductsComponent } from './public-layout/componentes/products/products.component';
 import { OurValuesComponent } from './public-layout/componentes/our-values/our-values.component';
 import { CurrentProjectsComponent } from './public-layout/componentes/current-projects/current-projects.component';
+import { MarcarAulaComponent } from './login-layout/dashboard/dashboard-componentes/marcar-aula/marcar-aula.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,8 @@ import { CurrentProjectsComponent } from './public-layout/componentes/current-pr
     OurInterestsComponent,
     ProductsComponent,
     OurValuesComponent,
-    CurrentProjectsComponent
+    CurrentProjectsComponent,
+    MarcarAulaComponent
   ],
   imports: [
     BrowserModule,
@@ -105,7 +108,8 @@ import { CurrentProjectsComponent } from './public-layout/componentes/current-pr
     MatPaginatorModule,
     MatSortModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
