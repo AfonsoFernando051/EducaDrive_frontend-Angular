@@ -3,13 +3,13 @@
         <thead>
         <tr>
             <th></th>
-            <ng-container *ngFor="let dia of diasSemana">
-            <th class="dia-semana" colspan="15"><span id="dia">{{ dia }}</span></th>
+            <ng-container *ngFor="let dia of diaDaSemana">
+            <th class="dia-semana" colspan="15"><span id="dia"> {{ dia.dia }} - {{ dia.nomeDoDiaDaSemana }}</span></th>
             </ng-container>
         </tr>
         <tr>
             <th class="horarios">Horários</th>
-            <ng-container *ngFor="let dia of diasSemana">
+            <ng-container *ngFor="let dia of diaDaSemana">
                 <ng-container *ngFor="let horario of horarios">
                     <th>
                         <span id="horario">{{ horario }}</span>
@@ -22,7 +22,7 @@
             <ng-container *ngFor="let professor of professores">
                 <tr>
                     <th class="professor" colspan="1"><span class="professor-name">{{ professor.nome }}</span></th>
-                    <ng-container *ngFor="let dia of diasSemana">
+                    <ng-container *ngFor="let dia of diaDaSemana">
                         <ng-container *ngFor="let horario of horarios">
                             <td (click)='openConfirmationDialog({professor, dia, horario})' id="{{professor.nome}}-{{dia}}-{{horario}}" class="block-class"></td>
                         </ng-container>   
