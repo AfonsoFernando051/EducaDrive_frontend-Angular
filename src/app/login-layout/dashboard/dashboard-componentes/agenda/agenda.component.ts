@@ -9,6 +9,8 @@ import { ConfirmationDialogService } from '../confirmation-dialog/confirmation-d
   styleUrls: ['./agenda.component.css']
 })
 export class AgendaComponent implements OnInit{
+
+  date = new Date()
   professores!: Professor[];
   diasSemana = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
   horarios = [
@@ -27,5 +29,11 @@ export class AgendaComponent implements OnInit{
     this.professoresService.getProfessor().subscribe(professor => {
       this.professores = professor;
     })    
+
+
+    console.log(this.date.getFullYear());
+    console.log(this.date.getMonth());
+    console.log(this.date.getDay());
+
   }
 }
