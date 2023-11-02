@@ -34,6 +34,10 @@ export class AgendaComponent implements OnInit{
       this.professores = professor;
     })    
     
-    this.diaDaSemana = this.dataService.diaDaSemana;
+    this.dataService.datas$.subscribe((datas) => {
+      this.diaDaSemana = this.dataService.diaDaSemana;
+      // Atualize a exibição com as novas datas
+    });
   }
+  
 }

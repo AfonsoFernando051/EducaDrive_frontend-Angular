@@ -14,7 +14,7 @@ export class ConfirmationDialogComponent {
   
   openReservaModal(data: any){
     this.dialogRef.close();
-    this.confirmationDialogService.openReserva(data);
+    this.confirmationDialogService.openReserva(data);    
   }
   sair(){
     this.dialogRef.close();
