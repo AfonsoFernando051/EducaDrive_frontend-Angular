@@ -2,20 +2,20 @@
     <mat-card-title>Editar Reserva</mat-card-title>
     <form>
         <mat-form-field class="inputUpdateForm">
-            <mat-select placeholder="Selecione um aluno" name="professor">
+            <mat-select placeholder="Selecione um aluno" [(ngModel)]="reserva.aluno" name="aluno">
                 <mat-option *ngFor="let aluno of alunos" [value]="aluno.id">
                     {{ aluno.nome }}
                 </mat-option>
             </mat-select>
         </mat-form-field>
         <mat-form-field class="inputUpdateForm">
-            <mat-select placeholder="Selecione uma categoria" name="categoria">
+            <mat-select placeholder="Selecione uma categoria" [(ngModel)]="reserva.categoria" name="categoria">
                 <mat-option value="carro">Carro</mat-option>
                 <mat-option value="moto">Moto</mat-option>
             </mat-select>
         </mat-form-field>
         <mat-form-field class="inputUpdateForm">
-            <mat-select placeholder="Selecione um veiculo" name="veiculo" [value]="professor.id">
+            <mat-select placeholder="Selecione um veiculo" [(ngModel)]="reserva.veiculo" name="veiculo" [value]="professor.id">
                 <mat-option [(ngModel)]="professor.veiculo1" value="carro" [ngModelOptions]="{standalone: true}">{{ professor.veiculo1 }}</mat-option>
                 <mat-option [(ngModel)]="professor.veiculo2" value="moto" [ngModelOptions]="{standalone: true}">{{ professor.veiculo2 }}</mat-option>
             </mat-select>

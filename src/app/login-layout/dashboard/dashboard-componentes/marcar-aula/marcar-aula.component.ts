@@ -7,6 +7,9 @@ import { Alunos } from '../../dashboard-views/models/alunos.model';
 import { AlunosService } from '../../dashboard-views/alunos/alunos-service/alunos.service';
 import { Professor } from '../../dashboard-views/models/professores.model';
 import { ProfessoresService } from '../../dashboard-views/professores/professor-service/professores.service';
+import { ReservarService } from './reservar.service';
+import { Reserva } from '../../dashboard-views/models/reserva.model';
+
 @Component({
   selector: 'app-marcar-aula',
   templateUrl: './marcar-aula.component.html',
@@ -14,20 +17,36 @@ import { ProfessoresService } from '../../dashboard-views/professores/professor-
 })
 export class MarcarAulaComponent implements OnInit{
 
-  isChecked: boolean = false;
-  cellToChange: any = "";
+  reserva: Reserva = {
+    dia_semana: "",
+    dia:"",
+    hora: "",
+    aluno: 0,
+    professor: 0,
+    categoria: "",
+    veiculo: "",
+    esta_pago: false 
+  }
   alunos: Alunos[] = [];
   professor: Professor = {
     nome: '',
     veiculo1: '',
     veiculo2: '',
   }
+  private dia:any;
+  private hora:any;
+  private timestamp:any;
+  private diaSemana: any;
+  isChecked: boolean = false;
+  cellToChange: any = "";
   
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef: MatDialogRef<ConfirmationDialogComponent>,
     private confirmationDialogService: ConfirmationDialogService,
     private alunoService: AlunosService,
-    private professorService: ProfessoresService) {}
+    private professorService: ProfessoresService,
+    private reservaService: ReservarService,
+   ) {}
 
   ngOnInit(): void {
     this.alunoService.getAluno().subscribe(aluno => {
@@ -35,32 +54,52 @@ export class MarcarAulaComponent implements OnInit{
     })
 
     var profNome = this.data.professor.nome;
-    var dia = this.data.dia;
-    var hora = this.data.horario;
-    this.cellToChange = profNome+"-"+dia+"-"+hora;
+    this.dia = this.data.dia;
+    this.hora = this.data.horario+":00";
+    this.diaSemana = this.data.diaDaSemana;
+    this.cellToChange = profNome+"-"+this.dia+"-"+this.hora;
     this.professor = this.data.professor;
+    this.timestamp = this.data.dia.ano+"-"+this.data.dia.mes+"-"+this.dia.dia;
+    
+    this.reserva = {
+      dia_semana: this.dia.nomeDoDiaDaSemana,
+      dia:this.timestamp,
+      hora: this.data.horario,
+      aluno: 0,
+      professor: this.professor.id ?? 0,
+      categoria: "",
+      veiculo: "",
+      esta_pago: false 
+    }
   }
   
   setCheckValue(event: any){
       if (event.checked) {
-        this.isChecked = true; console.log('Checkbox está marcado');
+        this.isChecked = true; 
+        this.reserva.esta_pago = true;
       } else {
         this.isChecked = false; console.log('Checkbox nao está marcado');
+        this.reserva.esta_pago = false;
       }
   }
 
   reservar(){
     var cell = document.getElementById(this.cellToChange);
-    var check = document.getElementById("checkClassPay");
 
-    this.dialogRef.close();
+   console.log(this.reserva);
+    this.reservaService.marcarAula(this.reserva).subscribe(() => {
+      this.reservaService.showMessage("Operação executada com sucesso!");
+      this.dialogRef.close();
+    })
 
     if(this.isChecked){
-      cell?.classList.remove('aula-nao-paga')
-      cell?.classList.add('aula-paga')
+      cell?.classList.remove('aula-nao-paga');
+      cell?.classList.add('aula-paga');
+      console.log('Checkbox está marcado');
     }else{
       cell?.classList.remove('aula-paga')
       cell?.classList.add('aula-nao-paga')
+      console.log('Checkbox nao está marcado');
     }
   }
 
