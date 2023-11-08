@@ -7,27 +7,52 @@ td{
     width: 300px;
 }
 .table-container {
-    max-width: 100%;
+    margin: 1%;
+    max-width: 99%;
     overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid black;
+
+}
+
+#separador{
+    background-color: #1c2538;
 }
 
 .dia-semana{
     height: 30px;
-    color: #3f51b5;
+    background-color: #ff6600;
+    color: #fff;
 }
 
 #dia{
     display: block;
-    width: 1200px;
+    width: 1018px;
     font-size: 18px;
-    height: 30px;
+    height: 40px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .horarios{
     height: 50px;
     font-size: 16px;
     width: 50px;
+    background-color: #1c2538;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#horario-th{
+    background-color: #1c2538;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #horario{
@@ -40,6 +65,11 @@ td{
     height: 50px;
     font-size: 16px;
     width: 50px;
+    background-color: #1c2538;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .block-class{

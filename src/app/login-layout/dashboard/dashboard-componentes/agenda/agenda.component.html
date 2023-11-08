@@ -2,7 +2,7 @@
     <table>
         <thead>
         <tr>
-            <th></th>
+            <th id="separador"></th>
             <ng-container *ngFor="let dia of diaDaSemana">
             <th class="dia-semana" colspan="15"><span id="dia"> {{ dia.dia }}/{{dia.mes}}/{{dia.ano}}- {{ dia.nomeDoDiaDaSemana }}</span></th>
             </ng-container>
@@ -11,7 +11,7 @@
             <th class="horarios">Horários</th>
             <ng-container *ngFor="let dia of diaDaSemana">
                 <ng-container *ngFor="let horario of horarios">
-                    <th>
+                    <th id="horario-th">
                         <span id="horario">{{ horario }}</span>
                     </th>
                 </ng-container>   
