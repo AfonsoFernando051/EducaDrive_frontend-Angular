@@ -16,12 +16,14 @@ td{
 }
 
 #separador{
-    background-color: #1c2538;
+    /* background-color: #1c2538; */
+    background-color: #3f51b5;
 }
 
 .dia-semana{
     height: 30px;
-    background-color: #ff6600;
+    /* background-color: #ff6600; */
+    background-color: #3f51b5;
     color: #fff;
 }
 
@@ -40,7 +42,8 @@ td{
     height: 50px;
     font-size: 16px;
     width: 50px;
-    background-color: #1c2538;
+    /* background-color: #1c2538; */
+    background-color: #2c3c5f;
     color: #fff;
     text-align: center;
     justify-content: center;
@@ -48,7 +51,9 @@ td{
 }
 
 #horario-th{
-    background-color: #1c2538;
+    background-color: #2c3c5f;
+
+    /* background-color: #1c2538; */
     color: #fff;
     text-align: center;
     justify-content: center;
@@ -65,7 +70,8 @@ td{
     height: 50px;
     font-size: 16px;
     width: 50px;
-    background-color: #1c2538;
+    background-color: #ff6600e8;
+    /* background-color: #3f51b5; */
     color: #fff;
     text-align: center;
     justify-content: center;

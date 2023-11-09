@@ -1,8 +1,52 @@
 .header{
     margin-bottom: 1px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2%;
+}
+
+#title-painel{
+    margin-left: 5%;
+}
+
+#painel{
+    color: #ff6600e8;
+    font-weight: 600;
 }
 
 #logout{
-    margin-left: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-left: 65%;
     padding: 20px;
+}
+
+#user-img{
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0; 
+}
+
+#user-text{
+    padding: 4%;
+    color: var(--dark-500, #1B1B1B);
+    text-align: center;
+    font-family: Public Sans;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18.8px;
+    letter-spacing: -0.4px;
+}
+
+#logout-icon{
+    padding: 5%;
+    cursor: pointer;
 }

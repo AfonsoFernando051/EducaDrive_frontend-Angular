@@ -10,8 +10,12 @@
     margin-left: 2%;
 }
 
+#month{
+    width: 100%;
+}
+
 .month-button{
-    width: 20px;
+    width: 130px;
 }
 
 #select-month{

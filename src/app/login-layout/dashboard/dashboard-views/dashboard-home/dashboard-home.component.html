@@ -1,10 +1,21 @@
 <mat-card class="home mat-elevation-z3">
-    <mat-card-title class="subtitle">
-        Aulas em {{mesesDoAno[this.mes-1]}}
-    </mat-card-title>
-    <div id="select-month">
-        <button class="month-button" mat-raised-button (click)="lastMonth()"><-</button>
-        <button class="month-button" mat-raised-button (click)="nextMonth()">-></button>
+    <!-- <div id="">
+        <mat-card-title >
+            Mês: {{mesesDoAno[this.mes-1]}}
+        </mat-card-title>
+        <div >
+            <button class="month-button" mat-raised-button (click)="lastMonth()"><- {{mesesDoAno[this.mes-2]}}</button>
+            <button class="month-button" mat-raised-button (click)="nextMonth()">{{mesesDoAno[this.mes]}} -></button>
+        </div>
+    </div> -->
+    <div id="month">
+        <mat-card-title class="subtitle">
+           Aulas no mês de {{mesesDoAno[this.mes-1]}}
+        </mat-card-title>
+        <div id="select-month">
+            <button class="month-button" mat-raised-button (click)="lastMonth()"><- {{mesesDoAno[this.mes-2]}}</button>
+            <button class="month-button" mat-raised-button (click)="nextMonth()">{{mesesDoAno[this.mes]}} -></button>
+        </div>
     </div>
+    <app-agenda></app-agenda>
 </mat-card>
-<app-agenda></app-agenda>

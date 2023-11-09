@@ -1,18 +1,24 @@
 <mat-toolbar class="header mat-elevation-z4">
-    <span>
-        <a>
-            <img class="logo" src="../../../../../assets/images/logo.png" alt="logo" width="75%">
-        </a>
-    </span>
-    <span class="title-group">
+    <div class="logo">
+        <img src="../../../../../assets/images/logo.png" alt="logo" width="20%">
+        <h2 id="title-painel">educa-drive-<span id="painel">painel</span></h2>
+    </div>
+    <!-- <span class="title-group">
         <a id="headerIconName" routerLink="{{routeUrl}}" style="color: black; text-decoration: none;">
             <i class="material-icons">
                 {{icon}}
             </i>
             {{title}}
         </a>
-    </span>
-    <button id="logout" mat-raised-button (click)="abrirModalSair()">
-        Sair
-    </button>
+    </span> -->
+
+
+    <div id="logout">
+        <img id="user-img" src="../../../../../assets/images/avatarUser.png" alt="Imagem do usuário" width="75%">
+        <h2 id="user-text"> Olá, User</h2>
+        <i class="material-icons" id="logout-icon" (click)="abrirModalSair()">
+            logout
+        </i>
+    </div>
+
 </mat-toolbar>
