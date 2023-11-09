@@ -1,20 +1,25 @@
 th{
-    border: 1px solid black;
+    border:0.51px solid black;
 }
 
 td{
-    border: 1px solid black;
+    border: 0.5px solid gray;
     width: 300px;
 }
 .table-container {
     margin: 1%;
     max-width: 99%;
     overflow-x: auto;
-    border-radius: 8px;
-    border: 1px solid black;
-
+    border-radius: 3px;
+    /* border: 1px solid black; */
 }
 
+.overflow{
+    background-color: #f2f2f2;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+}
 #separador{
     /* background-color: #1c2538; */
     background-color: #3f51b5;

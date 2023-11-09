@@ -2,13 +2,13 @@
     <table>
         <thead>
         <tr>
-            <th id="separador"></th>
+            <th id="separador" class="overflow"></th>
             <ng-container *ngFor="let dia of diaDaSemana">
             <th class="dia-semana" colspan="15"><span id="dia"> {{ dia.dia }}/{{dia.mes}}/{{dia.ano}}- {{ dia.nomeDoDiaDaSemana }}</span></th>
             </ng-container>
         </tr>
         <tr>
-            <th class="horarios">Horários</th>
+            <th class="horarios overflow">Horários</th>
             <ng-container *ngFor="let dia of diaDaSemana">
                 <ng-container *ngFor="let horario of horarios">
                     <th id="horario-th">
@@ -21,7 +21,7 @@
         <tbody>
             <ng-container *ngFor="let professor of professores">
                 <tr>
-                    <th class="professor" colspan="1"><span class="professor-name">{{ professor.nome }}</span></th>
+                    <th class="professor overflow" colspan="1"><span class="professor-name">{{ professor.nome }}</span></th>
                     <ng-container *ngFor="let dia of diaDaSemana">
                         <ng-container *ngFor="let horario of horarios">
                             <td (click)='openConfirmationDialog({professor, dia, horario})' id="{{professor.nome}}-{{dia.dia}}-{{horario}}-{{dia.ano}}" class="block-class"></td>
