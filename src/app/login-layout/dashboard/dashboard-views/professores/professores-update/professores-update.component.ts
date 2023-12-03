@@ -18,22 +18,22 @@ export class ProfessoresUpdateComponent implements OnInit {
     escola_id: 1
   };
 
+
   constructor(
     private professorService: ProfessoresService,
     private router: Router,
     private route: ActivatedRoute
   ){}
 
-  private id = this.route.snapshot.paramMap.get('id') || '';
-
   ngOnInit(): void {
-    this.professorService.readById(this.id).subscribe(professor => {
-      this.professor = professor;       
+    const id = this.route.snapshot.paramMap.get('id') || '';
+    this.professorService.readById(id).subscribe(professor => {
+      this.professor = professor[0];             
     });    
   }
 
-  updateProfessor(): void{   
-    const id = parseInt(this.id) 
+  updateProfessor(): void{  
+    const id = parseInt(this.route.snapshot.paramMap.get('id') || ''); 
     this.professorService.update(this.professor, id!).subscribe(professor => {
       this.professorService.showMessage("Atualizado com sucesso!");
       this.router.navigate(['/dashboard/professores'])

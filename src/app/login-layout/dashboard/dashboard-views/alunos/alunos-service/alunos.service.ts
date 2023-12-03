@@ -11,6 +11,7 @@ export class AlunosService {
 
   private ApiUrlAluno = 'http://localhost:3001/insert-aluno';
   private ApiUrlAlunoRead = 'http://localhost:3001/read-alunos';
+  private ApiUrlAlunoReadById = 'http://localhost:3001/read-aluno';
   private ApiUrlUpdateAluno = 'http://localhost:3001/update-aluno';
   private ApiUrlDeleteAluno = 'http://localhost:3001/delete-aluno';
 
@@ -42,17 +43,13 @@ export class AlunosService {
     return this.http.get<Alunos[]>(this.ApiUrlAlunoRead)
   }
 
-  readById(id: string): Observable<Alunos>{    
-    const url = `${this.ApiUrlAlunoRead}/${id}`;    
+  readById(id: number): Observable<Alunos>{    
+    const url = `${this.ApiUrlAlunoReadById}/${id}`;    
     return this.http.get<Alunos>(url);
   }
 
   update(aluno:Alunos,id: number): Observable<Alunos>{
-    console.log(id);
-    const url = `${this.ApiUrlUpdateAluno}/${id}`;
-    console.log(url);
-    console.log(aluno);
-    
+    const url = `${this.ApiUrlUpdateAluno}/${id}`;    
     return this.http.put<Alunos>(url, aluno).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

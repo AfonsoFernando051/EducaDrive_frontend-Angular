@@ -48,7 +48,6 @@ export class DatasService {
       this.ano = this.ano + 1;
       this.date.setFullYear(this.ano)
     }
-    console.log(this.ano);
     
     this.diaDaSemana = this.obterDiaDaSemanaDeTodosOsDiasDoMes(this.date, this.mes, this.ano);
     this.datasSubject.next(this.diaDaSemana);

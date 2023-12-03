@@ -19,7 +19,6 @@ export class LoginComponent {
       (response) => {
         if(response.token){
           this.authService.showMessage(response.message)
-          console.log(response.token);
           localStorage.setItem('token', response.token);
           setTimeout(() => {
             window.location.href = '/dashboard/dashboard-home';

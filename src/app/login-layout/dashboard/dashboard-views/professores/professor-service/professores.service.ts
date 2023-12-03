@@ -41,16 +41,13 @@ export class ProfessoresService {
     return this.http.get<Professor[]>(this.ApiUrlProfRead)
   }
 
-  readById(id: string): Observable<Professor>{    
+  readById(id: string): Observable<Professor[]>{    
     const url = `${this.ApiUrlProfRead}/${id}`;    
-    return this.http.get<Professor>(url);
+    return this.http.get<Professor[]>(url);
   }
 
   update(professor:Professor,id: number): Observable<Professor>{
-    console.log(id);
     const url = `${this.ApiUrlUpdateProf}/${id}`;
-    console.log(url);
-    console.log(professor);
     
     return this.http.put<Professor>(url, professor).pipe(
       map(obj => obj),

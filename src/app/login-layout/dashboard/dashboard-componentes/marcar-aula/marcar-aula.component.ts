@@ -57,7 +57,7 @@ export class MarcarAulaComponent implements OnInit{
     this.dia = this.data.dia;
     this.hora = this.data.horario+":00";
     this.diaSemana = this.data.diaDaSemana;
-    this.cellToChange = profNome+"-"+this.dia+"-"+this.hora;
+    this.cellToChange = profNome+"-"+this.data.dia.dia+"-"+this.hora+"-"+this.data.dia.ano;    
     this.professor = this.data.professor;
     this.timestamp = this.data.dia.ano+"-"+this.data.dia.mes+"-"+this.dia.dia;
     
@@ -78,7 +78,7 @@ export class MarcarAulaComponent implements OnInit{
         this.isChecked = true; 
         this.reserva.esta_pago = true;
       } else {
-        this.isChecked = false; console.log('Checkbox nao está marcado');
+        this.isChecked = false;
         this.reserva.esta_pago = false;
       }
   }
@@ -86,21 +86,19 @@ export class MarcarAulaComponent implements OnInit{
   reservar(){
     var cell = document.getElementById(this.cellToChange);
 
-   console.log(this.reserva);
     this.reservaService.marcarAula(this.reserva).subscribe(() => {
       this.reservaService.showMessage("Operação executada com sucesso!");
+
+      if(this.isChecked){
+        cell?.classList.remove('aula-nao-paga');
+        cell?.classList.add('aula-paga');
+      }else{
+        cell?.classList.remove('aula-paga')
+        cell?.classList.add('aula-nao-paga')
+      }
+
       this.dialogRef.close();
     })
-
-    if(this.isChecked){
-      cell?.classList.remove('aula-nao-paga');
-      cell?.classList.add('aula-paga');
-      console.log('Checkbox está marcado');
-    }else{
-      cell?.classList.remove('aula-paga')
-      cell?.classList.add('aula-nao-paga')
-      console.log('Checkbox nao está marcado');
-    }
   }
 
   fecharModal(){

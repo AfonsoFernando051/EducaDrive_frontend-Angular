@@ -20,7 +20,6 @@ export class AlunosUpdateComponent {
     categoria: '',
   }
   professores: Professor[] = [];
-  private id = this.route.snapshot.paramMap.get('id') || '';
 
   constructor(private alunoService: AlunosService,
     private router: Router,
@@ -36,13 +35,18 @@ export class AlunosUpdateComponent {
   }
 
   ngOnInit(): void {
+    const id = parseInt(this.route.snapshot.paramMap.get('id') || '');
     this.professoresService.getProfessor().subscribe(professor => {
-      this.professores = professor;
+      this.professores = professor;      
+    })
+    this.alunoService.readById(id).subscribe(aluno => {
+      this.aluno = aluno;
     })
   }
 
-  criarAluno(){
-    const id = parseInt(this.id)
+  atualizarAluno(){
+    const id = parseInt(this.route.snapshot.paramMap.get('id') || '');
+    
     this.alunoService.update(this.aluno, id).subscribe(() => {
       this.alunoService.showMessage("Operação executada com sucesso!");
       this.router.navigate(['/dashboard/alunos']);
